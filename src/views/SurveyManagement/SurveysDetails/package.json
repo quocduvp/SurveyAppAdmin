@@ -1,0 +1,6 @@
+{
+  "name": "SurveysDetails",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SurveysDetails.js"
+}

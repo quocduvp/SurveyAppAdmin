@@ -1,0 +1,1 @@
+export const CellTable = ["#","Username", "Card ID", "Section", "Status", "Create at"]

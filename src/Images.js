@@ -1,0 +1,1 @@
+export const notImage = require('./assets/img/notImage.jpg')
