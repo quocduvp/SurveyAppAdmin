@@ -11,7 +11,6 @@ class Publish extends Component {
         this.props.dispatch(changePublishSurveys(this.props.id))
     }
     render() {
-        const {classes} = this.props
         return (
             <div className={'d-flex justify-content-center align-items-center'}
                  style={{minHeight: '200px', position: 'relative'}}>

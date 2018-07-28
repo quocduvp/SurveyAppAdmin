@@ -56,9 +56,6 @@ export function changeCreateClassroom(form) {
             },
             "data": qs.stringify(form)
         }
-        await dispatch({
-            type: FETCH_CLASSROOM_START
-        })
         await axios(settings)
             .then(async r => {
                 await swal({
@@ -69,9 +66,6 @@ export function changeCreateClassroom(form) {
                 await dispatch({
                     type: FETCH_LIST_CLASSROOM,
                     payload: r.data
-                })
-                await dispatch({
-                    type: FETCH_CLASSROOM_STOP
                 })
             }).catch(async err => {
                 await swal({
@@ -138,9 +132,6 @@ export function changeUpdateClassroom(form,id) {
             },
             "data": qs.stringify(form)
         }
-        await dispatch({
-            type: FETCH_CLASSROOM_START
-        })
         await axios(settings)
             .then(async r => {
                 await swal({
@@ -151,9 +142,6 @@ export function changeUpdateClassroom(form,id) {
                 await dispatch({
                     type: FETCH_LIST_CLASSROOM,
                     payload: r.data
-                })
-                await dispatch({
-                    type: FETCH_CLASSROOM_STOP
                 })
             }).catch(async err => {
                 await swal({

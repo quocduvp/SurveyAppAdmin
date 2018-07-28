@@ -56,9 +56,9 @@ class Faculty extends Component {
                                             <TableCell component="th" scope="row">
                                                 {id}
                                             </TableCell>
-                                            <TableCell>{faculty.faculty_code}</TableCell>
-                                            <TableCell>{faculty.faculty_name}</TableCell>
-                                            <TableCell>{faculty.faculty_description}</TableCell>
+                                            <TableCell>{String(faculty.faculty_code)}</TableCell>
+                                            <TableCell>{String(faculty.faculty_name)}</TableCell>
+                                            <TableCell>{String(faculty.faculty_description)}</TableCell>
                                             <TableCell>{faculty.create_at.substring(0, 10)}</TableCell>
                                             <TableCell>
                                                 <IconButton onClick={this.Delete.bind(this,faculty.id)}>

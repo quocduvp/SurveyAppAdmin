@@ -127,7 +127,7 @@ export function changePageSize(size, role) {
 
 //delete acount
 export function deleteAccount(id, currentPage) {
-    return deleteAccount(id, currentPage)
+    return deleteAccounts(id, currentPage)
 }
 
 //get details accoount
@@ -271,7 +271,7 @@ function getListAccountsStudent(page, page_size) {
 }
 
 //delete account
-function deleteAccount(id, currentPage) {
+function deleteAccounts(id, currentPage) {
     return async dispatch => {
         const settings = await {
             "async": true,

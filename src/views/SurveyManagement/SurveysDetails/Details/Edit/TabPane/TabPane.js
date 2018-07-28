@@ -63,7 +63,7 @@ class TabPane extends React.Component {
                 </AppBar>
                 {value === 0 && <TabContainer><Overview details={details}/></TabContainer>}
                 {value === 1 && <TabContainer><Questions details={details}/></TabContainer>}
-                {value === 2 && <TabContainer><Participants/></TabContainer>}
+                {value === 2 && <TabContainer><Participants idSurvey={details.id}/></TabContainer>}
                 {value === 3 && <TabContainer>
                     <Publish publish={details.publish} id={details.id}/>
                 </TabContainer>}

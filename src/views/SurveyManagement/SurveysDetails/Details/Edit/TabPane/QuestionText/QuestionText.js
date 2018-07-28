@@ -6,7 +6,6 @@ import Question from "./Question";
 
 class QuestionText extends Component {
     render() {
-        const {classes} = this.props
         const question = this.props.questions
         return (
             <div>

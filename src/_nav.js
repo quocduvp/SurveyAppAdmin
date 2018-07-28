@@ -79,7 +79,7 @@ export default {
         {
             name: 'Feedbacks',
             url: '/feedbacks',
-            icon: 'fa fa-feedback',
+            icon: 'fa fa-envelope-o',
             badge: {
 
             },
@@ -87,7 +87,7 @@ export default {
         {
             name: 'FAQs',
             url: '/FAQs',
-            icon: 'fa fa-feedback',
+            icon: 'fa fa-commenting-o',
             badge: {
 
             },

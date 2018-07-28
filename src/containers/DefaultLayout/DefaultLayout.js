@@ -21,8 +21,6 @@ import DefaultFooter from './DefaultFooter';
 import DefaultHeader from './DefaultHeader';
 //redux
 import  {connect} from 'react-redux'
-import {fetchAdminProfile} from "../../redux/actions/profileActions";
-
 //
 const hist = createHashHistory()
 class DefaultLayout extends Component {

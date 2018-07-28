@@ -12,7 +12,7 @@ import {changeCreateClassroom} from "../../../redux/actions/classroomActions";
 class DialogAddClassroom extends React.Component {
     state = {
         class_code: "",
-        faculty_id: "",
+        faculty_id: 1,
         open: false,
     };
 

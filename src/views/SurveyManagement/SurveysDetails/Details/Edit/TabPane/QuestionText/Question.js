@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {withStyles} from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditQuestionForm from "../EditQuestion/EditQuestionForm";
 import {deleteQuestion} from "../../../../../../../redux/actions/questionAction";

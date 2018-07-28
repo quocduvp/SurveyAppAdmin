@@ -53,9 +53,6 @@ export function changeCreateFaculty(form) {
             },
             "data": qs.stringify(form)
         }
-        await dispatch({
-            type: FETCH_FACULTY_START
-        })
         await axios(settings)
             .then(async r => {
                 await swal({
@@ -66,9 +63,6 @@ export function changeCreateFaculty(form) {
                 await dispatch({
                     type: FETCH_LIST_FACULTY,
                     payload: r.data
-                })
-                await dispatch({
-                    type: FETCH_FACULTY_STOP
                 })
             }).catch(async err => {
                 await swal({
@@ -135,9 +129,6 @@ export function changeUpdateFaculty(form,id) {
             },
             "data": qs.stringify(form)
         }
-        await dispatch({
-            type: FETCH_FACULTY_START
-        })
         await axios(settings)
             .then(async r => {
                 await swal({
@@ -148,9 +139,6 @@ export function changeUpdateFaculty(form,id) {
                 await dispatch({
                     type: FETCH_LIST_FACULTY,
                     payload: r.data
-                })
-                await dispatch({
-                    type: FETCH_FACULTY_STOP
                 })
             }).catch(async err => {
                 await swal({

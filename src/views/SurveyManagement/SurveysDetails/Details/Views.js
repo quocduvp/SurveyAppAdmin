@@ -63,7 +63,6 @@ class Views extends Component {
     }
 
     render() {
-        const {classes} = this.props
         const survey = this.props.surveys
         return (
             <Paper>

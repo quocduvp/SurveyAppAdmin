@@ -52,3 +52,6 @@ export const remove_faqs = "https://survey-service-api.azurewebsites.net/api/v1/
 export const create_faqs = "https://survey-service-api.azurewebsites.net/api/v1/admin/faqs"
 export const update_faqs = "https://survey-service-api.azurewebsites.net/api/v1/admin/faqs"
 export const list_faqs = "https://survey-service-api.azurewebsites.net/api/v1/all/faqs"
+// dashboard
+export const statistics_system = "https://survey-service-api.azurewebsites.net/api/v1/admin/dashboard"
+export const statistics_survey_details = "https://survey-service-api.azurewebsites.net//api/v1/admin/dashboard/surveys"

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {withStyles} from "@material-ui/core/styles/index";
-import CardMedia from '@material-ui/core/CardMedia';
-import FileUpload from '@material-ui/icons/FileUpload';
+import IconButton from '@material-ui/core/IconButton';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import {connect} from 'react-redux'
 import {UploadThumbSurveys} from "../../../../../../redux/actions/surveysActions";
 import {notImage} from "../../../../../../Images";
@@ -16,15 +16,17 @@ class Thumb extends Component {
         const {classes} = this.props
         return (
             <div className={classes.root}>
-                <CardMedia
+                <img alt="bg"
                     className={classes.media}
-                    image={this.props.thumb !== null ?this.props.thumb: notImage}
+                    src={this.props.thumb !== null ?this.props.thumb: notImage}
                 />
                 <div className={classes.upload}>
-                    <label className={classes.label} htmlFor="fileUpload">
-                        <FileUpload/>
+                    <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+                    <label htmlFor="icon-button-file">
+                        <IconButton color="primary" className={classes.button} component="span">
+                            <PhotoCamera />
+                        </IconButton>
                     </label>
-                    <input onChange={this.Change.bind(this)} className={classes.uploadAvatar} type={'file'} accept="image/*" id={'fileUpload'} name='file'/>
                 </div>
             </div>
         );
@@ -35,29 +37,22 @@ const styles = theme => ({
     root: {
         position: 'relative'
     },
-    label: {
-        padding : '6px',
-        backgroundColor: '#2690ff',
-        margin : 0,
-        borderRadius : '50px'
-    },
-    uploadAvatar : {
-        width: "0.1px",
-        height: "0.1px",
-        overflow: "hidden",
-        position: "absolute",
-        zIndex: -1
-    },
     upload: {
         position: 'absolute',
         right: '16px',
         bottom: '16px',
         zIndex: '99',
-        backgroundColor: '#4a78ae'
     },
     media: {
         height: '200px',
-        width: '100%'
+        width: '100%',
+        objectFit : 'cover'
     },
+    button: {
+        margin: theme.spacing.unit,
+      },
+      input: {
+        display: 'none',
+      },
 });
 export default withStyles(styles)(connect()(Thumb));

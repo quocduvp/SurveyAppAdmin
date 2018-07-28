@@ -7,7 +7,6 @@ import Checkbox from '@material-ui/core/Checkbox'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import InfoIcon from '@material-ui/icons/InfoOutline'
-import DeleteIcon from '@material-ui/icons/Delete'
 import {createHashHistory} from 'history'
 import {changeRestoreSurveys} from "../../../../redux/actions/surveysActions";
 
