@@ -8,6 +8,7 @@ export const get_list_account = 'https://survey-service-api.azurewebsites.net/ap
 export const get_list_account_deny = 'https://survey-service-api.azurewebsites.net/api/v1/admin/accounts_verify'
 export const get_list_account_staff = 'https://survey-service-api.azurewebsites.net/api/v1/admin/staff_accounts'
 export const get_list_account_student = 'https://survey-service-api.azurewebsites.net/api/v1/admin/student_accounts'
+export const get_list_report_account = 'https://survey-service-api.azurewebsites.net/api/v1/admin/list_report'
 export const delete_account = 'https://survey-service-api.azurewebsites.net/api/v1/admin/accounts'
 export const get_details_account = 'https://survey-service-api.azurewebsites.net/api/v1/admin/accounts'
 export const change_status_account = 'https://survey-service-api.azurewebsites.net/api/v1/admin/accounts/status'

@@ -37,6 +37,40 @@ class DialogResetPass extends React.Component {
         this.props.dispatch(resetPasswordAccount(form,this.props.idAccount))
         this.setState({open: false})
     }
+    //check password
+    CheckPassword = () => {
+        // const regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+        const UpperCase = /(?=.*?[A-Z])/
+        const LowerCase = /(?=.*?[a-z])/
+        const number = /(?=.*?[0-9])/
+        const specialChar = /(?=.*?[#?!@$%^&*-])/
+        const len8 = /.{8,}/
+        if (!UpperCase.test(this.state.password)) {
+            return false
+        } else if (!LowerCase.test(this.state.password)) {
+            return false
+        } else if (!number.test(this.state.password)) {
+            return false
+        } else if (!specialChar.test(this.state.password)) {
+            return false
+        } else if (!len8.test(this.state.password)) {
+            return false
+        } else {
+            return true
+        }
+    }
+    componentDidUpdate(){
+        this.CheckPassword()
+        this.CheckConfirmPassword()
+    }
+    //check confirm password
+    CheckConfirmPassword = ()  => {
+        if (this.state.password === this.state.password2) {
+            return true
+        } else {
+            return false
+        }
+    }
     render() {
         return (
             <div style={{marginTop:'16px'}}>
@@ -56,27 +90,31 @@ class DialogResetPass extends React.Component {
                             Only use the password reset function when the user reported forget password
                         </DialogContentText>
                         <TextField
+                            error={!this.CheckPassword()}
                             autoFocus
                             margin="dense"
-                            id="name"
                             label="New password"
                             type="password"
                             fullWidth
                             autoComplete={'off'}
                             name = 'password'
+                            helperText={this.state.password.length > 0 ? this.CheckPassword() ? 'Password valid' : 'Password invalid' : ''}
                             value={this.state.password}
                             onChange={this.ChangeForm.bind(this)}
                             required
                         />
+                        
                         <TextField
+                            error={!this.CheckConfirmPassword()}
+                            disabled={this.state.password.length > 0 ? !this.CheckPassword() : true}
                             autoFocus
                             margin="dense"
-                            id="name"
                             label="Confirm password"
                             type="password"
                             fullWidth
                             autoComplete={'off'}
                             name = 'password2'
+                            helperText={this.state.password2.length > 0 ? this.CheckConfirmPassword() ? 'Password valid' : 'Password invalid' : ''}
                             value={this.state.password2}
                             onChange={this.ChangeForm.bind(this)}
                             required
@@ -86,7 +124,7 @@ class DialogResetPass extends React.Component {
                         <Button onClick={this.handleClose} color="primary">
                             Cancel
                         </Button>
-                        <Button onClick={this.SubmitForm.bind(this)} color="primary">
+                        <Button disabled={this.state.password2.length > 0 ? !this.CheckConfirmPassword() : true} onClick={this.SubmitForm.bind(this)} color="primary">
                             Submit
                         </Button>
                     </DialogActions>

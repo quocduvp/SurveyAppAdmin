@@ -7,7 +7,6 @@ class Fields extends Component {
         return (
             <TextField
                 label={this.props.labelName}
-                id="margin-normal"
                 defaultValue={value}
                 disabled
                 fullWidth

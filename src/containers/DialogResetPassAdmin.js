@@ -56,7 +56,7 @@ class DialogResetPassAdmin extends React.Component {
                         <TextField
                             autoFocus
                             margin="dense"
-                            id="name"
+                            id="password"
                             label="New password"
                             type="password"
                             fullWidth

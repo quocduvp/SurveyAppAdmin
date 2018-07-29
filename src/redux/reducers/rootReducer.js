@@ -18,6 +18,7 @@ import {classroomReducer} from "./classroomReducer";
 import {feedbackReducer} from  './feedbackReducer'
 import {faqsReducer} from "./faqsReducer";
 import { statistics } from './statisticsReducer';
+import { reportReducer } from './listReportReducer';
 export const rootReducer = combineReducers({
     accessToken: accessToken,
     profile: profileAdmin,
@@ -27,5 +28,6 @@ export const rootReducer = combineReducers({
     classroom : classroomReducer,
     feedback : feedbackReducer,
     faqs : faqsReducer,
-    statistics : statistics
+    statistics : statistics,
+    reports : reportReducer
 })

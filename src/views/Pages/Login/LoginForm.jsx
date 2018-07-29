@@ -22,7 +22,6 @@ class LoginForm extends Component {
     }
     LoginAdmin(e){
         e.preventDefault()
-        console.log(this.state)
         this.props.dispatch(loginToAdmin(this.state))
     }
     render() {

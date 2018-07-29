@@ -40,6 +40,7 @@ class AddQuestionForm extends Component {
                             label={'Priority'}
                             defaultValue={Number(this.state.priority)}
                             type='number'
+                            inputProps={{ min: "0", step: "1" }}
                             style={{width: '80px'}}
                             className={'m-1'}
                             name={'priority'}

@@ -41,6 +41,11 @@ export default {
                     name: 'Accounts student',
                     url: '/accounts_student',
                     icon: 'icon-graduation',
+                },
+                {
+                    name: 'List reports',
+                    url: '/accounts_report',
+                    icon: 'icon-graduation',
                 }
             ]
         },

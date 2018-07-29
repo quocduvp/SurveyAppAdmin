@@ -30,6 +30,7 @@ class EditQuestionForm extends Component {
                     <TextField
                         id="margin-none"
                         defaultValue={Number(this.state.priority)}
+                        inputProps={{ min: "0", step: "1" }}
                         type='number'
                         style={{width: '80px'}}
                         className={'m-1'}

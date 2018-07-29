@@ -43,7 +43,7 @@ class DefaultHeader extends Component {
                 <Nav className="ml-auto" navbar>
                     <AppHeaderDropdown direction="down">
                         <DropdownToggle nav>
-                            <img src={'http://icongal.com/gallery/image/212948/admin_administrator_user_person_customer_face.png'}
+                            <img src={require('../../../src/admin.png')}
                                  className="img-avatar"
                                  alt="admin"/>
                         </DropdownToggle>
