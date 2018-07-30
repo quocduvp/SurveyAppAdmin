@@ -98,14 +98,14 @@ const routes = [
     {path: '/accounts_deny',exact: true, name: 'Accounts Deny', component: AccountsDeny},
     {path: '/accounts_staff',exact: true, name: 'Accounts Deny', component: AccountsStaff},
     {path: '/accounts_student',exact: true, name: 'Accounts Deny', component: AccountsStudent},
-    {path: '/accounts_report',exact: true, name: 'Accounts Report', component: AccountsReport},
+    {path: '/accounts_help',exact: true, name: 'Accounts help', component: AccountsReport},
     {path: '/surveys',exact: true, name: 'The surveys list', component: SurveysPublish},
     {path: '/surveys_text',exact: true, name: 'The surveys type text', component: SurveysTypeText},
     {path: '/surveys_choice',exact: true, name: 'The surveys type choice', component: SurveysTypeChoice},
     {path: '/surveys_unpublish',exact: true, name: 'The surveys unpublish', component: SurveysTypeUnpublish},
     {path: '/surveys_deleted',exact: true, name: 'The surveys deteted', component: SurveysTypeDeleted},
     {path: '/surveys/:id',exact: true, name: 'The surveys details', component: SurveysDetails},
-    {path: '/education',exact: true, name: 'Faculties & Classrooms', component: Education},
+    {path: '/education',exact: true, name: 'Faculties & Class', component: Education},
     {path: '/feedbacks',exact: true, name: 'Feedbacks', component: Feebacks},
     {path: '/FAQs',exact: true, name: 'FAQs', component: FAQs}
 ];

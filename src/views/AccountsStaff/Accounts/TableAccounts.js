@@ -40,7 +40,7 @@ class TableAccounts extends Component {
                     <div style={styles.page}>
                         <CardContent>
                             <Typography variant={"headline"}>
-                                Current accouts
+                            Current accounts
                             </Typography>
                         </CardContent>
                         <Table style={styles.table}>

@@ -22,7 +22,7 @@ class TableAccounts extends Component {
                     <div style={styles.page}>
                         <CardContent>
                             <Typography variant={"headline"}>
-                                Current accouts
+                            Lost account password
                             </Typography>
                         </CardContent>
                         <Table style={styles.table}>

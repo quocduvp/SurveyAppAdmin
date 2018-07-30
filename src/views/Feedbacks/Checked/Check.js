@@ -10,7 +10,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import CheckBox from '@material-ui/core/Checkbox';
 import {connect} from 'react-redux'
 import Loader from "../../../containers/Component/Loader/Loader";
 import {fetchListFeedbackChecked, removeFeedback} from "../../../redux/actions/feedbackActions";
@@ -46,7 +45,6 @@ class Check extends Component {
                                     <TableCell>#</TableCell>
                                     <TableCell>title</TableCell>
                                     <TableCell>username</TableCell>
-                                    <TableCell>checked</TableCell>
                                     <TableCell>Create_at</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -59,9 +57,6 @@ class Check extends Component {
                                             </TableCell>
                                             <TableCell>{feedback.title.substring(0,30)}</TableCell>
                                             <TableCell>{feedback.userinfo.username}</TableCell>
-                                            <TableCell>
-                                                <CheckBox checked={feedback.check}/>
-                                            </TableCell>
                                             <TableCell>{feedback.create_at.substring(0, 10)}</TableCell>
                                             <TableCell>
                                                 <IconButton onClick={this.Delete.bind(this,feedback.id)}>

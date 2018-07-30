@@ -10,14 +10,6 @@ export default {
             },
         },
         {
-            name: 'Faculty/classroom',
-            url: '/education',
-            icon: 'fa fa-building',
-            badge: {
-
-            },
-        },
-        {
             name: 'Manage account',
             url: '/accounts',
             icon: 'icon-people',
@@ -43,9 +35,9 @@ export default {
                     icon: 'icon-graduation',
                 },
                 {
-                    name: 'List reports',
-                    url: '/accounts_report',
-                    icon: 'icon-graduation',
+                    name: 'Forgot password help',
+                    url: '/accounts_help',
+                    icon: 'icon-flag',
                 }
             ]
         },
@@ -62,17 +54,17 @@ export default {
                 {
                     name: 'Surveys type text',
                     url: '/surveys_text',
-                    icon: 'fa fa-file-text-o',
+                    icon: 'icon-doc',
                 },
                 {
                     name: 'Surveys type choice',
                     url: '/surveys_choice',
-                    icon: 'fa fa-check-circle-o',
+                    icon: 'icon-check',
                 },
                 {
                     name: 'Survey list unpublish',
                     url: '/surveys_unpublish',
-                    icon: 'fa fa-unlock',
+                    icon: 'icon-lock',
                 },
                 {
                     name: 'Survey list deleted',
@@ -82,9 +74,17 @@ export default {
             ]
         },
         {
+            name: 'Faculty/Class',
+            url: '/education',
+            icon: 'icon-directions',
+            badge: {
+
+            },
+        },
+        {
             name: 'Feedbacks',
             url: '/feedbacks',
-            icon: 'fa fa-envelope-o',
+            icon: 'icon-envelope-letter',
             badge: {
 
             },
@@ -92,7 +92,7 @@ export default {
         {
             name: 'FAQs',
             url: '/FAQs',
-            icon: 'fa fa-commenting-o',
+            icon: 'icon-speech',
             badge: {
 
             },

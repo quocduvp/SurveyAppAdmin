@@ -41,14 +41,14 @@ class DialogAddClassroom extends React.Component {
         return (
             <div>
                 <Button variant={'extendedFab'} color={'primary'} onClick={this.handleClickOpen}>
-                    Add new classrooms
+                    Add new class
                 </Button>
                 <Dialog
                     open={this.state.open}
                     onClose={this.handleClose}
                     aria-labelledby="form-dialog-title"
                 >
-                    <DialogTitle id="form-dialog-title">Create new classrooms</DialogTitle>
+                    <DialogTitle id="form-dialog-title">Create new class</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
                             Input to form
@@ -57,7 +57,7 @@ class DialogAddClassroom extends React.Component {
                             autoFocus
                             margin="dense"
                             id="name"
-                            label="Classroom"
+                            label="Class"
                             type="text"
                             fullWidth
                             autoComplete={'off'}

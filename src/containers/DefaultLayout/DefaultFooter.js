@@ -15,7 +15,7 @@ class DefaultFooter extends Component {
 
     return (
       <React.Fragment>
-        <span className="ml-auto">Powered by Upex</span>
+        <span className="ml-auto">Powered by Dev</span>
       </React.Fragment>
     );
   }

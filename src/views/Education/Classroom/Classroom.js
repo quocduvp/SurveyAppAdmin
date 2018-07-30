@@ -33,7 +33,7 @@ class Classroom extends Component {
                     <div>
                         <CardContent className={'d-flex align-items-center'}>
                             <Typography variant={"headline"}>
-                                Current classrooms
+                                Current class
                             </Typography>
                             <div className={'ml-auto'}>
                                 <DialogAddClassroom/>
@@ -43,10 +43,10 @@ class Classroom extends Component {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>#</TableCell>
-                                    <TableCell>Classroom</TableCell>
+                                    <TableCell>Class</TableCell>
                                     <TableCell>Faculty code</TableCell>
                                     <TableCell>Faculty name</TableCell>
-                                    <TableCell>Create_at</TableCell>
+                                    <TableCell>Create at</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>

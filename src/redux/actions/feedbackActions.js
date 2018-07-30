@@ -1,7 +1,14 @@
-import {store} from "../store";
+import {
+    store
+} from "../store";
 import axios from "axios";
 import swal from "sweetalert"
-import {list_feeback_checked, list_feeback_unchecked, remove_feedback, update_check_feedback} from "../../API/apiUrl";
+import {
+    list_feeback_checked,
+    list_feeback_unchecked,
+    remove_feedback,
+    update_check_feedback
+} from "../../API/apiUrl";
 export const FETCH_FEEDBACK_STOP = "FETCH_FEEDBACK_STOP"
 export const FETCH_FEEDBACK_START = "FETCH_FEEDBACK_START"
 export const FETCH_FEEDBACK_CHECK = "FETCH_FEEDBACK_CHECK"
@@ -19,22 +26,22 @@ export function fetchListFeedbackChecked() {
             }
         }
         await dispatch({
-            type:  FETCH_FEEDBACK_START
+            type: FETCH_FEEDBACK_START
         })
         await axios(settings)
-            .then(async r=>{
+            .then(async r => {
                 await dispatch({
-                    type:  FETCH_FEEDBACK_CHECK,
-                    payload : r.data
+                    type: FETCH_FEEDBACK_CHECK,
+                    payload: r.data
                 })
                 await dispatch({
-                    type:  FETCH_FEEDBACK_STOP
+                    type: FETCH_FEEDBACK_STOP
                 })
-            }).catch(async err=>{
+            }).catch(async err => {
                 await swal({
-                    title : 'Error',
-                    icon : 'error',
-                    text : 'Fetch list error.'
+                    title: 'Error',
+                    icon: 'error',
+                    text: 'Fetch list error.'
                 })
             })
     }
@@ -51,16 +58,16 @@ export function fetchListFeedbackUnChecked() {
             }
         }
         await axios(settings)
-            .then(async r=>{
+            .then(async r => {
                 await dispatch({
-                    type:  FETCH_FEEDBACK_UNCHECK,
-                    payload : r.data
+                    type: FETCH_FEEDBACK_UNCHECK,
+                    payload: r.data
                 })
-            }).catch(async err=>{
+            }).catch(async err => {
                 await swal({
-                    title : 'Error',
-                    icon : 'error',
-                    text : 'Fetch list error.'
+                    title: 'Error',
+                    icon: 'error',
+                    text: 'Fetch list error.'
                 })
             })
     }
@@ -77,17 +84,17 @@ export function viewFeedback(id) {
             }
         }
         await axios(settings)
-            .then(async r=>{
+            .then(async r => {
                 await dispatch({
-                    type : FETCH_FEEDBACK_CHECK,
-                    payload : r.data
+                    type: FETCH_FEEDBACK_CHECK,
+                    payload: r.data
                 })
                 await dispatch(fetchListFeedbackUnChecked())
-            }).catch(async err=>{
+            }).catch(async err => {
                 await swal({
-                    title : 'Error',
-                    icon : 'error',
-                    text : 'View feedback fails.'
+                    title: 'Error',
+                    icon: 'error',
+                    text: 'View feedback fails.'
                 })
             })
     }
@@ -103,19 +110,35 @@ export function removeFeedback(id) {
                 "Authorization": `bearer ${store.getState().accessToken.accessToken}`
             }
         }
-        await axios(settings)
-            .then(async r=>{
-                await dispatch({
-                    type : FETCH_FEEDBACK_CHECK,
-                    payload : r.data
-                })
-                await dispatch(fetchListFeedbackUnChecked())
-            }).catch(async err=>{
-                await swal({
-                    title : 'Error',
-                    icon : 'error',
-                    text : 'View feedback fails.'
-                })
-            })
+        await swal({
+            title: 'Warning',
+            icon: 'warning',
+            text: 'Are you sure ?',
+            buttons: true,
+            dangerMode: true
+        }).then(async value => {
+            if (value) {
+                await axios(settings)
+                    .then(async r => {
+                        await swal({
+                            title: 'Success',
+                            icon: 'success',
+                            text: 'Delete feedback success.'
+                        })
+                        await dispatch({
+                            type: FETCH_FEEDBACK_CHECK,
+                            payload: r.data
+                        })
+                        await dispatch(fetchListFeedbackUnChecked())
+                    }).catch(async err => {
+                        await swal({
+                            title: 'Error',
+                            icon: 'error',
+                            text: 'Delete feedback fails.'
+                        })
+                    })
+            }
+        })
+
     }
 }
