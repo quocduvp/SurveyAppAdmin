@@ -88,6 +88,7 @@ class DialogCreateFaculty extends React.Component {
                             margin="dense"
                             id="name"
                             label="Description"
+                            multiline
                             type="text"
                             fullWidth
                             autoComplete={'off'}

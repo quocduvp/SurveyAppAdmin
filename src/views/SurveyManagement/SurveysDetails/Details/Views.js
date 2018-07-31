@@ -69,7 +69,7 @@ class Views extends Component {
                 <Card>
                     <div className={'d-flex align-items-center'} id={'title'} style={{padding: '16px 10px'}}>
                         {this.state.title ?
-                            <EditFields type={'text'} name={'title'} value={survey.details.title}
+                            <EditFields multiline={false} type={'text'} name={'title'} value={survey.details.title}
                                         dispatch={this.ChangeForm.bind(this)}/>
                             :
                             <Typography variant={'headline'}>
@@ -84,7 +84,7 @@ class Views extends Component {
                     {/*Description*/}
                     <div className={'d-flex align-items-center'} id={'description'} style={{padding: '10px'}}>
                         {this.state.description ?
-                            <EditFields type={'text'} name={'description'} value={survey.details.description}
+                            <EditFields multiline={true} type={'text'} name={'description'} value={survey.details.description}
                                         dispatch={this.ChangeForm.bind(this)}/>
                             :
                             <Typography variant={'subheading'}>
@@ -98,7 +98,7 @@ class Views extends Component {
                     {/*Date start*/}
                     <div className={'d-flex align-items-center'} id={'date_start'} style={{padding: '10px'}}>
                         {this.state.date_start ?
-                            <EditFields type={'date'} name={'date_start'}
+                            <EditFields multiline={false} type={'date'} name={'date_start'}
                                         value={survey.details.date_start.substring(0, 10)}
                                         dispatch={this.ChangeForm.bind(this)}/>
                             :

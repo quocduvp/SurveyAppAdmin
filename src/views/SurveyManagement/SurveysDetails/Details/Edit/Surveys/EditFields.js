@@ -5,6 +5,7 @@ class EditFields extends Component {
         return (
             <div className={'w-100'}>
                 <TextField
+                    multiline={this.props.multiline}
                     id="multiline-static"
                     label={this.props.name}
                     defaultValue={this.props.value}
