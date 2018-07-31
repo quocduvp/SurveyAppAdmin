@@ -44,7 +44,7 @@ class Faculty extends Component {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>#</TableCell>
-                                    <TableCell>Title</TableCell>
+                                    <TableCell>Tittle</TableCell>
                                     <TableCell>Body</TableCell>
                                     <TableCell>Create at</TableCell>
                                 </TableRow>

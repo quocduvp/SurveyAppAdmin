@@ -94,7 +94,9 @@ class DialogAddNew extends React.Component {
                             fullWidth
                             autoComplete={'off'}
                             name = 'date_start'
-                            value={this.state.date_start}
+                            value={new Date(this.state.date_start) > new Date('2015-01-01')
+                                ? this.state.date_start : '2015-01-01'
+                            }
                             onChange={this.ChangeForm.bind(this)}
                             required
                         />

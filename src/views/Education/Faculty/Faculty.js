@@ -46,7 +46,7 @@ class Faculty extends Component {
                                     <TableCell>Faculty code</TableCell>
                                     <TableCell>Faculty name</TableCell>
                                     <TableCell>Faculty description</TableCell>
-                                    <TableCell>Create_at</TableCell>
+                                    <TableCell>Create at</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>

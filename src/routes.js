@@ -41,9 +41,9 @@ const AccountsStudent = Loadable({
     loading: Loading
 });
 
-//list account reported
-const AccountsReport = Loadable({
-    loader: () => import('./views/AccountsReport/Accounts'),
+//list account forgot
+const AccountsForgot = Loadable({
+    loader: () => import('./views/AccountsForgot/Accounts'),
     loading: Loading
 });
 
@@ -98,7 +98,7 @@ const routes = [
     {path: '/accounts_deny',exact: true, name: 'Accounts Deny', component: AccountsDeny},
     {path: '/accounts_staff',exact: true, name: 'Accounts Deny', component: AccountsStaff},
     {path: '/accounts_student',exact: true, name: 'Accounts Deny', component: AccountsStudent},
-    {path: '/accounts_help',exact: true, name: 'Accounts help', component: AccountsReport},
+    {path: '/accounts_help',exact: true, name: 'Accounts help', component: AccountsForgot},
     {path: '/surveys',exact: true, name: 'The surveys list', component: SurveysPublish},
     {path: '/surveys_text',exact: true, name: 'The surveys type text', component: SurveysTypeText},
     {path: '/surveys_choice',exact: true, name: 'The surveys type choice', component: SurveysTypeChoice},

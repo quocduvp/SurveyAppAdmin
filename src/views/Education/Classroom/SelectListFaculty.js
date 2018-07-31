@@ -58,9 +58,6 @@ class SelectListFaculty extends React.Component {
                         id: 'demo-controlled-open-select',
                     }}
                 >
-                    <MenuItem value="">
-                        <em>None</em>
-                    </MenuItem>
                     {this.props.faculty.faculty.map((faculty,id)=>{
                         return(
                             <MenuItem key={id} value={faculty.id}>{faculty.faculty_name}</MenuItem>

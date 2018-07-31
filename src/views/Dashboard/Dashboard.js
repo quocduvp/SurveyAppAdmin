@@ -18,7 +18,7 @@ class Dashboard extends Component {
                         <Box bgColor={'#2979ff'} title={'Users'}>{statistics.systems.total_account}</Box>
                         <Box bgColor={'#2979ff'} title={'Surveys'}>{statistics.systems.total_surveys}</Box>
                         <Box bgColor={'#2979ff'} title={'Participants'}>{statistics.systems.total_submitted}</Box>
-                        <Box bgColor={'#2979ff'} title={'Classrooms'}>{statistics.systems.total_classrooms}</Box>
+                        <Box bgColor={'#2979ff'} title={'Class'}>{statistics.systems.total_classrooms}</Box>
                         <Box bgColor={'#2979ff'} title={'Faculty'}>{statistics.systems.total_faculty}</Box>
                         <Box bgColor={'#2979ff'} title={'Feedback'}>{statistics.systems.total_feedbacks}</Box>
                         <Box bgColor={'#2979ff'} title={'FAQs'}>{statistics.systems.total_faqs}</Box>
