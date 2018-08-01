@@ -8,6 +8,7 @@ import Select from '@material-ui/core/Select';
 import axios from 'axios'
 import swal from 'sweetalert'
 import {connect} from 'react-redux'
+import { get_survey_type } from '../../../API/apiUrl';
 const styles = theme => ({
     button: {
         display: 'block',
@@ -45,7 +46,7 @@ class SelectSurveyType extends React.Component {
         let settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://survey-service-api.azurewebsites.net/api/v1/admin/survey_type",
+            "url": get_survey_type,
             "method": "GET",
             "headers": {
                 "Authorization": `bearer ${this.props.accessToken.accessToken}`,

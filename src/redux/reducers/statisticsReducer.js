@@ -100,7 +100,7 @@ export function fetchStatisticSurveysDetails(id) {
             await swal({
                 title : 'Error',
                 icon : 'error',
-                text : 'Surveys not found.'
+                text : 'There are no answers from the user.'
             })
         })
     }

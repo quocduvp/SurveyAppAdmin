@@ -21,7 +21,7 @@ class Thumb extends Component {
                     src={this.props.thumb !== null ?this.props.thumb: notImage}
                 />
                 <div className={classes.upload}>
-                    <input accept="image/*" className={classes.input} id="icon-button-file" type="file" />
+                    <input onChange={this.Change.bind(this)} accept="image/*" className={classes.input} id="icon-button-file" type="file" />
                     <label htmlFor="icon-button-file">
                         <IconButton color="primary" className={classes.button} component="span">
                             <PhotoCamera />
