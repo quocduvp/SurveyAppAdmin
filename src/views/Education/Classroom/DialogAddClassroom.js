@@ -36,6 +36,7 @@ class DialogAddClassroom extends React.Component {
             faculty_id: this.state.faculty_id,
         }
         this.props.dispatch(changeCreateClassroom(form))
+        this.setState({open: false})
     }
     render() {
         return (

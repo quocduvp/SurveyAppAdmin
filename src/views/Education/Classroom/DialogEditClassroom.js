@@ -38,6 +38,7 @@ class DialogEditClassroom extends React.Component {
             faculty_id: this.state.faculty_id,
         }
         this.props.dispatch(changeUpdateClassroom(form,this.props.classroom.id))
+        this.setState({open: false})
     }
     render() {
         return (
@@ -50,7 +51,7 @@ class DialogEditClassroom extends React.Component {
                     onClose={this.handleClose}
                     aria-labelledby="form-dialog-title"
                 >
-                    <DialogTitle id="form-dialog-title">Create new class</DialogTitle>
+                    <DialogTitle id="form-dialog-title">Edit class</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
                             Input to form
